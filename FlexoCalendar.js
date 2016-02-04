@@ -77,7 +77,7 @@ EMAIL : danningmao@outlook.com
 			else if(options.type == 'weekly'){
 				calendar = Calendar.prototype.bulidWeekly(options, year, month);
 			}
-			$(options.target).find('table.table-condensed tbody').empty().append(calendar).trigger('el.create');			
+			$(options.target).find('table.flexoCalendar tbody').empty().append(calendar).trigger('el.create');			
 			Calendar.prototype.changeCH(this,options);
 
 			if( this.className == 'prev' && options.ongoprev ){
