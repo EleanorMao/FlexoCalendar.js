@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FlexoCalendar</title>
+	<link rel="stylesheet" href="FlexoCalendar.css">
+	<script src="jq.js"></script>
+	<script src="FlexoCalendar.js"></script>
+</head>
+<body style="background:#f5f5f5;">
+	<div class="calendar-wrapper">
+		<div id="calendar"></div>
+	</div>
+	<div class="calendar-wrapper">
+		<div id="calendar-weekly"></div>
+	</div>
+	<div class="calendar-wrapper">
+		<div id="calendar-monthly"></div>
+	</div>
+	
+	
+	<script>
+		$("#calendar").flexoCalendar({setYear:2015,setMonth:4, selectDate: 'each-each-each'});
+		$("#calendar-weekly").flexoCalendar({type:'weekly',today:false});
+		$("#calendar-monthly").flexoCalendar({
+			type: 'monthly',
+			onselect: function(date){
+				console.log(date)
+			}
+		});
+	</script>
+</body>
+</html>
