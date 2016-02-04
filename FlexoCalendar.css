@@ -1,0 +1,27 @@
+@charset "utf-8";
+blockquote,body,button,caption,dd,div,dl,dt,fieldset,figure,form,h1,h2,h3,h4,h5,h6,html,input,legend,li,menu,ol,p,pre,.flexoCalendar,td,textarea,th,ul{margin:0;padding:0}
+*{box-sizing:border-box;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;font-family:'微软雅黑',"Microsoft YaHei",'宋体',Arial,Microsoft YaHei,Helvetica,sans-serif;}
+.calendar-wrapper{position: relative;margin-bottom: 20px;width: 230px;margin:15px auto;background: #fff;min-height:155px;}
+.calendar-wrapper .flexoCalendar{margin:0 auto;border-collapse:separate;width: 100%;position: relative;z-index: 1}
+.flexoCalendar td,.flexoCalendar th{border:0 none;height:27px;text-align:center;width:32px;font-size:12px;cursor:pointer}
+.flexoCalendar tr th .icon-arrow-left{display:inline-block;height:16px;line-height:16px;margin-top:4px;vertical-align:text-top;width:12px;cursor:pointer}
+.flexoCalendar tr th .icon-arrow-right{display:inline-block;height:16px;line-height:16px;margin-top:4px;vertical-align:text-top;width:12px;cursor:pointer}
+.icon-arrow-left:before{content: '<';font-style: normal;}
+.icon-arrow-right:before{content: '>';font-style: normal;}
+.flexoCalendar thead tr{height:25px;color: #fff;}
+.flexoCalendar thead tr:first-child th{cursor:pointer}
+.flexoCalendar thead tr:first-child th:hover{background:#3dbaf0}
+.flexoCalendar tr td.other-month{color:#aaa}
+.flexoCalendar thead,.flexoCalendar th{background-color: #3dbaf0;font-weight: normal;color: #fff;}
+.flexoCalendar tr th.current-year{width: 60%;}
+.flexoCalendar td.selected-day span{color:  #3dbaf0;} 
+.flexoCalendar tr td .day{display: block;width: 30px;height: 25px;line-height: 22px;text-align: center;margin:1px;border:1px solid transparent;}
+.flexoCalendar tr td.current-day>div,.flexoCalendar td.current-day>span{border:1px solid #3dbaf0!important;border-radius: 4px;color:#3dbaf0;background: #fff;}
+.flexoCalendar tr td.selected>div,.flexoCalendar tr td.selected>span,.flexoCalendar tr td.selected>div span{border:1px solid #3dbaf0;border-radius: 4px;background-color:#3dbaf0;color: #fff!important}
+#calendar-weekly .calendar-hd,#calendar-monthly .calendar-hd,#calendar-weekly tbody td{height: 30px;}
+#calendar-weekly tr td div{margin-bottom: 2px;}
+#calendar-weekly tr td .week{width: 100%;height: 100%;line-height: 30px;color:#565656;text-align: center;}
+#calendar-weekly tr td .process{color:#999;margin-left: 20px;display: inline-block;width: 57px;text-align: left;}
+#calendar-monthly td.tmonth .month{display: block;width: 55px;height: 30px;line-height:30px;margin:1px;text-align: center;border-radius: 4px;color: #565656;border:1px solid transparent;}
+#calendar-monthly td.current-month .month{border:1px solid #3dbaf0;}
+#calendar-weekly tr td.week1 div,.tmonth.month1 span,.tmonth.month2 span,.tmonth.month3 span,.tmonth.month4 span{margin-top: 10px!important;}
