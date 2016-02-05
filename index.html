@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>Flexocalendar.js by EleanorMao</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">Flexocalendar.js</h1>
+      <h2 class="project-tagline">可展示日历、周历、月历；同时提供方法输入日期即可得知该日是该月的第几周；</h2>
+      <a href="https://github.com/EleanorMao/FlexoCalendar.js" class="btn">View on GitHub</a>
+      <a href="https://github.com/EleanorMao/FlexoCalendar.js/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/EleanorMao/FlexoCalendar.js/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="flexocalendarjs" class="anchor" href="#flexocalendarjs" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>FlexoCalendar.js</h1>
+
+<h1></h1>
+
+<h3>
+<a id="概述" class="anchor" href="#%E6%A6%82%E8%BF%B0" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>概述</h3>
+
+<ul>
+<li>依赖jQuery</li>
+<li>可展示日历、周历、月历</li>
+<li>同时提供方法输入日期即可得知该日是该月的第几周以及每月的天数</li>
+</ul>
+
+<h1></h1>
+
+<h3>
+<a id="使用" class="anchor" href="#%E4%BD%BF%E7%94%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>使用</h3>
+
+<p>在html中引入jQuery.js,FlexoCalendar.js以及FlexoCalendar.css，例如</p>
+
+<div class="highlight highlight-text-html-basic"><pre>
+    &lt;<span class="pl-ent">link</span> <span class="pl-e">rel</span>=<span class="pl-s"><span class="pl-pds">"</span>stylesheet<span class="pl-pds">"</span></span> <span class="pl-e">href</span>=<span class="pl-s"><span class="pl-pds">"</span>FlexoCalendar.css<span class="pl-pds">"</span></span>&gt;
+<span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>jq.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+<span class="pl-s1">    &lt;<span class="pl-ent">script</span> <span class="pl-e">src</span>=<span class="pl-s"><span class="pl-pds">"</span>FlexoCalendar.js<span class="pl-pds">"</span></span>&gt;&lt;/<span class="pl-ent">script</span>&gt;</span>
+</pre></div>
+
+<h3>
+<a id="调用方法" class="anchor" href="#%E8%B0%83%E7%94%A8%E6%96%B9%E6%B3%95" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>调用方法</h3>
+
+<div class="highlight highlight-source-js"><pre>    <span class="pl-k">&lt;</span>script<span class="pl-k">&gt;</span>
+      <span class="pl-en">$</span>(<span class="pl-k">function</span>(){
+        <span class="pl-en">$</span>(dom).<span class="pl-en">flexoCalendar</span>();
+      })
+    <span class="pl-k">&lt;</span><span class="pl-k">/</span>script<span class="pl-k">&gt;</span></pre></div>
+
+<h3>
+<a id="参数列表" class="anchor" href="#%E5%8F%82%E6%95%B0%E5%88%97%E8%A1%A8" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>参数列表</h3>
+
+<blockquote>
+<h4>
+<a id="type" class="anchor" href="#type" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>type</h4>
+
+<pre><code>可选参数 normal | weekly | monthly 
+默认参数 normal
+* normal: 日历
+* weekly: 周历
+* monthly: 月历
+</code></pre>
+
+<h4>
+<a id="id" class="anchor" href="#id" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>id</h4>
+
+<pre><code>默认参数 ''
+自定义日历的id
+</code></pre>
+
+<h4>
+<a id="classname" class="anchor" href="#classname" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>className</h4>
+
+<pre><code>默认参数 ''
+自定义日历的样式名
+</code></pre>
+
+<h4>
+<a id="daynames" class="anchor" href="#daynames" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>dayNames</h4>
+
+<pre><code>默认参数 ['日', '一', '二', '三', '四', '五', '六']
+周名
+</code></pre>
+
+<h4>
+<a id="numbers" class="anchor" href="#numbers" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>numbers</h4>
+
+<pre><code>默认参数 ['一', '二', '三', '四', '五', '六']
+用于周历，修正数字显示
+</code></pre>
+
+<h4>
+<a id="today" class="anchor" href="#today" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>today</h4>
+
+<pre><code>默认参数 true
+是否高亮今天，如果选择 false 则不高亮今天
+被高亮的日期会有 current-day 的样式
+如果是周历还会拥有 current-week 的样式
+如果是月历则还会拥有 current-month 的样式
+</code></pre>
+
+<h4>
+<a id="select" class="anchor" href="#select" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>select</h4>
+
+<pre><code>默认参数 true 
+是否可选中，如果选择 false 则不可选中日期
+如果被选中会获得样式 selected
+</code></pre>
+
+<h4>
+<a id="multi" class="anchor" href="#multi" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>multi</h4>
+
+<pre><code>默认参数 false
+是否可多选，如果选择 true 则日期可被多选
+如果被选中会获得样式 selected
+</code></pre>
+
+<h4>
+<a id="disothermonth" class="anchor" href="#disothermonth" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>disOtherMonth</h4>
+
+<pre><code>默认参数 false
+用于日历，是否禁用可选其他月份的日期，如果选择 true 则禁用可选其他月份的日期
+</code></pre>
+
+<h4>
+<a id="setmonth" class="anchor" href="#setmonth" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>setMonth</h4>
+
+<pre><code>默认参数 当前月
+可初始化日历展示月份
+</code></pre>
+
+<h4>
+<a id="setyear" class="anchor" href="#setyear" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>setYear</h4>
+
+<pre><code>默认参数 当前年
+可初始化日历展示年份
+</code></pre>
+
+<h4>
+<a id="selectdate" class="anchor" href="#selectdate" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>selectDate</h4>
+
+<pre><code>默认参数 null 
+自定义高亮的日期
+格式 yyyy-mm-dd | yyyy-mm | yyyy-mm-weekn
+年月日均可被设为each
+yyyy/mm如被设置为each则被认为是日历展示的当前年/月
+dd或weekn被设置为each则被设置1号或者第一周
+例子:　$(dom).flexoCalendar({selectDate:'2014-2-5'})
+       $(dom).flexoCalendar({selectDate:'2015-04-week2'})
+</code></pre>
+
+<h4>
+<a id="allowdate" class="anchor" href="#allowdate" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>allowDate</h4>
+
+<pre><code>默认参数 null
+限定日历上下翻动的上限
+格式 ['yyyy-mm','yyyy-mm']
+例子: $(dom).flexoCalendar({allowDate:['2013-04','2016-07']})
+**该日期为限定的日期的下一个月，和上一个月
+</code></pre>
+
+<h4>
+<a id="prev" class="anchor" href="#prev" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>prev</h4>
+
+<pre><code>默认参数 'icon-arrow-left'
+设定日历向左翻动按钮的样式
+</code></pre>
+
+<h4>
+<a id="next" class="anchor" href="#next" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>next</h4>
+
+<pre><code>默认参数 'icon-arrow-right'
+设定日历向右反动按钮的样式
+</code></pre>
+
+<h4>
+<a id="onselect" class="anchor" href="#onselect" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>onselect</h4>
+
+<pre><code>默认参数 function(){}
+选择时调用的函数
+传入参数：选中日期的日期
+function(date){}
+</code></pre>
+
+<h4>
+<a id="ongoprev" class="anchor" href="#ongoprev" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ongoprev</h4>
+
+<pre><code>默认参数 function(){}
+日历向后翻动时调用的函数
+传入参数：前一个日期，当前的日期
+function(prevdate, currentdate){}
+</code></pre>
+
+<h4>
+<a id="ongonext" class="anchor" href="#ongonext" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>ongonext</h4>
+
+<pre><code>默认参数 function(){}
+日历向后翻动时调用的函数
+传入参数：后一个日期，当前的日期
+function(nextdate, currentdate){}
+</code></pre>
+</blockquote>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/EleanorMao/FlexoCalendar.js">Flexocalendar.js</a> is maintained by <a href="https://github.com/EleanorMao">EleanorMao</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
